@@ -1,4 +1,3 @@
-import scala.collection.immutable
 import scala.collection.immutable._
 
 sealed trait Queue[T] {
@@ -7,36 +6,48 @@ sealed trait Queue[T] {
    // # Removes the element at the beginning of the immutable queue, and returns the new queue.
   def deQueue(): Queue[T]
   def head: Option[T]
+  // # for debugging
   def printQ: Unit
 }
 
-class QueueImpl[T](private val lst: List[T]) extends Queue[T] {
-  //val lst: List[T] = scala.collection.immutable.List[T]()
-  //var lst: List[T] = scala.collection.immutable.List[T]()
+//Using 2 immutable list to implement this queue
+//This is inspired from List class functioning as a stack
+//Since scala List class is optimal for LIFO/stack like pattern , then we can implement queue with using 2 List/stacks
+class QueueImpl[T](private val inputLst: List[T], private val outputLst: List[T]) extends Queue[T] {
+  def this() = this(Queue.empty[T], Queue.empty[T])
 
-  override def isEmpty: Boolean = lst.isEmpty
+  override def isEmpty: Boolean = inputLst.isEmpty && outputLst.isEmpty
 
   override def enQueue(t: T): Queue[T] = {
-    new QueueImpl[T](t :: lst)
+    val newLst = t :: inputLst
+    new QueueImpl[T](newLst, outputLst)
   }
 
   override def deQueue(): Queue[T] = {
-    new QueueImpl[T](lst.dropRight(1))
+    if(this.isEmpty) throw new RuntimeException("The queue is empty")
+    else if(outputLst.isEmpty){
+      new QueueImpl(Queue.empty[T],  inputLst.reverse.tail)
+    } else {
+      new QueueImpl[T](inputLst, outputLst.tail)
+    }
   }
 
   override def head: Option[T] = {
-    lst.headOption
+    if(this.isEmpty) None
+    else if(outputLst.nonEmpty) outputLst.headOption
+    else Option(inputLst.last)
   }
 
   override def printQ(): Unit = {
-    print("Queue is: ")
-    lst.foreach(x => print(s"$x ") )
-    println(lst.isEmpty)
+    print("Input List is: ")
+    inputLst.foreach(x => print(s"$x ") )
+    print("Output List is: ")
+    outputLst.foreach(x => print(s"$x ") )
+    println("")
   }
 }
 
 object Queue {
   type Queue[T] = scala.collection.immutable.List[T]
-  //def Queue[T](xs: T*) = List(xs: _*)
   def empty[T]: Queue[T] = List.empty[T]
 }
