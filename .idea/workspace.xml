@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd8a7f3-82b2-4ea8-baf7-4ed4dfdc7322" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_13_1_2_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_13_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_2_13_3_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_2_13_3_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_compatible_3_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/QueueSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Paypay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Paypay.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Queue.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Queue.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="ScalaTest.QueueSpec">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Paypay" />
@@ -47,8 +66,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QueueSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="Paypay" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="QueueSpec" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.QueueSpec" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -80,8 +120,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3155991234316" />
-        <entry key="$PROJECT_DIR$/build.sbt" value="4036619000" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="2017218918" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="2912332145" />
       </map>
     </option>
@@ -91,7 +130,6 @@
         <entry key="$PROJECT_DIR$/../../../Misc-Test/pizzaServingTime/riskident" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../fpinscala" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../http4s/quickstart" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
         <entry key="$PROJECT_DIR$/../iOffice/homework-stream/stream-ff" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../iOffice/iof-stream-fast-food" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../iOffice/test-gvolpe/iof-stream-fast-food2" value="PREVIEW" />
@@ -129,22 +167,22 @@
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
     <state x="478" y="24" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578001212525" />
-    <state width="1821" height="296" key="GridCell.Tab.0.bottom" timestamp="1578039456527">
+    <state width="1821" height="340" key="GridCell.Tab.0.bottom" timestamp="1578076002083">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
-    <state width="1821" height="296" key="GridCell.Tab.0.bottom/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578039456527" />
-    <state width="1821" height="296" key="GridCell.Tab.0.center" timestamp="1578039456527">
+    <state width="1821" height="340" key="GridCell.Tab.0.bottom/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578076002083" />
+    <state width="1821" height="340" key="GridCell.Tab.0.center" timestamp="1578076002083">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
-    <state width="1821" height="296" key="GridCell.Tab.0.center/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578039456527" />
-    <state width="1821" height="296" key="GridCell.Tab.0.left" timestamp="1578039456527">
+    <state width="1821" height="340" key="GridCell.Tab.0.center/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578076002083" />
+    <state width="1821" height="340" key="GridCell.Tab.0.left" timestamp="1578076002083">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
-    <state width="1821" height="296" key="GridCell.Tab.0.left/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578039456527" />
-    <state width="1821" height="296" key="GridCell.Tab.0.right" timestamp="1578039456527">
+    <state width="1821" height="340" key="GridCell.Tab.0.left/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578076002083" />
+    <state width="1821" height="340" key="GridCell.Tab.0.right" timestamp="1578076002083">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
-    <state width="1821" height="296" key="GridCell.Tab.0.right/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578039456527" />
+    <state width="1821" height="340" key="GridCell.Tab.0.right/53.24.1867.1056/1920.0.1920.1080/3840.0.1920.1080@53.24.1867.1056" timestamp="1578076002083" />
     <state x="480" y="174" key="SettingsEditor" timestamp="1577999641388">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
