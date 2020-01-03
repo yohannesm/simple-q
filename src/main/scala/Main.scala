@@ -2,6 +2,7 @@
 object Main extends App {
 
   println("Hello world!")
+  /* played around here
   val q: Queue[Int] = new QueueImpl[Int]()
   val q1 = q.enQueue(1)
   println(q1.head == Some(1))
@@ -18,4 +19,5 @@ object Main extends App {
   q5.printQ
   q6.printQ
   q7.printQ
+   */
 }
