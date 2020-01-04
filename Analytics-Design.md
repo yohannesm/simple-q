@@ -5,7 +5,7 @@ High level design of analytic system to handle large read/write volume
 ## Requirements:
 -   Handle large write volume: Billions write events per day. 
 -   Handle large read volume: Read/Query patterns with time series related metrics. 
--   Provide metrics with customers with at most one hour delay.
+-   Provide metrics to customers with at most one hour delay.
 -   Run with minimum downtime.
 -   Ability to reprocess historical data in case of bugs in the processing logic. 
 
@@ -21,15 +21,25 @@ We can easily achieve this by using Kafka and InfluxDB for the time-series datab
     capabilities. We could use `Kafka Connect` to connect our Kafka brokers into influxDB. 
     InfluxDB has a high performance datastore written specifically for time series data. 
     The downside, maybe we need the enterprise edition to eliminate single point of failure
-    or we have to do the replication logic and partitioning ourselves. 
+    or we have to do the replication logic and partitioning ourselves. Sample performance
+    comparison vs Cassandra in [here](https://www.influxdata.com/blog/influxdb-vs-cassandra-time-series/)
 3.  We can treat our connector to InfluxDB as Kafka consumer, based on how rapid our data 
     rate is, we can see what would be the consumer offset for one hour. We have to make
-    sure that all the Kafka consumer are consuming within the threshold and we can setup an 
-    alert in case it falls below that threshold. Because Kafka and InfluxDB is horizontally 
-    scalable, we can easily scale them just in case we get an sudden increase in data. 
+    sure that all the Kafka consumer are consuming within the threshold(consumer lag) 
+    and we can setup an alert in case it falls below that threshold. 
+    Because Kafka and InfluxDB is horizontally scalable, we can easily scale 
+    them just in case we get an sudden increase in data. 
+    By doing this, we are ensuring that customer will have access to one hour worth of data
+    or newer. We can also connect our InfluxDB to Grafana for easy visualization and give
+    that access to our customer so they can easily monitor their analytics there. 
 4.  By ensuring our Kafka replication factor is high enough (at least 3), and then 
     replicating it by using MirrorMaker over various AZ(Availability Zones) that 
-    would make it resilient from any single point of failure. 
-5.  We can always reprocess Kafka data since we can set its retention time. We can also
-    proactively do a Snapshot of the Kafka topic and then restore it later. 
+    would make it resilient from any single point of failure. In doing this, for example
+    whenever one of the AWS Availability zone went down, we will be fine since we will be
+    replicating our data in multiple AZs. If we are doing a self-hosting or using a different
+    cloud providers then we also have to keep this in mind to minimize any possible downtime. 
+5.  We can always reprocess Kafka data since we can set its retention time. We can reset 
+    the offset of the Kafka consumer and change its consumer group to reprocess data again.
+    There's more details and options in [here](https://www.confluent.io/blog/data-reprocessing-with-kafka-streams-resetting-a-streams-application/)
+    
     
