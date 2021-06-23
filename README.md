@@ -1,4 +1,4 @@
-# Immutable Queue implementation
+# Immutable Queue implementation in Scala
 ## This project was made by IntelliJ. 
  - You can build this project by running sbt commands, or running it in IntelliJ
  - install sbt, and then run it on this directory
